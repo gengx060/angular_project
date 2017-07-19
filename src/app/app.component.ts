@@ -10,14 +10,21 @@ declare var BootstrapDialog:any; // Magic
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello11 {{name}}</h1>
+  template: `
+  <menu></menu>
 
-  <hero-form></hero-form>
+  <div (click)="displayToastr()">Display Toastr</div>`
+//   template: `
+//   <h1>Hello11 {{name}}</h1>
+//   <menu></menu>
+//   <hero-form></hero-form>
 
-  <div (click)="displayToastr()">Display Toastr</div>`,
+//   <div (click)="displayToastr()">Display Toastr</div>`,
 })
 
-export class AppComponent  { name = 'wdawd1';
+export class AppComponent  {
+  debugger;
+  name = 'wdawd1';
   displayToastr() {
     //toastr.info('messag11e');
     BootstrapDialog.alert('I want banana!');
